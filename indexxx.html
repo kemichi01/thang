@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+function songay() {
+    let month = parseInt(document.getElementById("nhapthang").value);
+    let result = document.getElementById('fox')
+    switch (month) {
+        case 2:
+            result.innerText = "Tháng 2 có 28 hoặc 29 ngày";
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            result.innerText = ("tháng có 30 ngày");
+            break;
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            result.innerText = ('tháng có 31 ngày');
+            break;
+    }
+}
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input id="nhapthang" type="text" value="1" >
+        </td>
+        <td>
+            <input type="button" value="Tính số Ngày" onclick="songay()">
+        </td>
+    </tr>
+
+    </tr>
+</table>
+<p id="fox"></p>
+</body>
+</html>
